@@ -301,6 +301,8 @@ header.visible {
 .nav-links a { color:var(--text); text-decoration:none; font-weight:500; padding:6px 0; position:relative; transition: color .22s ease; }
 .nav-links a:hover { color:var(--accent); }
 .btn-login { background: linear-gradient(135deg, rgba(182,23,225,0.95), rgba(208,74,247,0.85)); color:white; padding:10px 18px; border-radius:20px; text-decoration:none; font-weight:600; }
+/* Acceso Clientes (2026-11-23): en celular el botón va dentro del menú, no en la barra */
+@media (max-width: 992px) { .btn-login-escritorio { display:none; } }
 
 .hero { padding:110px 0 80px; position:relative; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
 .hero.visible { opacity: 1; transform: translateY(0); }
@@ -1484,7 +1486,8 @@ header.visible {
                     <a href="#contacto">Contacto</a>
                 </div>
 
-              <!--  <a href="#" class="btn-login">Acceso Clientes</a>-->
+                <!-- Acceso al portal de clientes. Actualizado 2026-11-23 (Claude, rol Full Stack Developer, para Ganddi) -->
+                <a href="https://ganddi-portal.pages.dev" class="btn-login btn-login-escritorio" aria-label="Acceso Clientes: portal de clientes de Ganddi">Acceso Clientes</a>
                 
                 <!-- Botón hamburguesa para móvil -->
                 <button class="hamburger-menu" id="hamburgerMenu">
@@ -1505,7 +1508,7 @@ header.visible {
             <a href="#estadisticas" class="mobile-nav-link">Estadísticas</a>
             <a href="#equipo" class="mobile-nav-link">Equipo</a>
             <a href="#contacto" class="mobile-nav-link">Contacto</a>
-            <a href="#" class="btn-login">Acceso Clientes</a>
+            <a href="https://ganddi-portal.pages.dev" class="btn-login" aria-label="Acceso Clientes: portal de clientes de Ganddi">Acceso Clientes</a>
         </div>
     </nav>
 
